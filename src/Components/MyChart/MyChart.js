@@ -1,6 +1,6 @@
 import { Grid, Typography } from '@mui/material';
 import React from 'react';
-// import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
+import { PieChart, Pie, Cell } from 'recharts';
 
 import {
   Tooltip,
@@ -25,13 +25,13 @@ const MyChart = () => {
     { name: "Q8", 2019: 8 },
   ];
 
-  // const dataaa = [
-  //   { name: 'Group A', value: 400 },
-  //   { name: 'Group B', value: 300 },
-  //   { name: 'Group C', value: 300 },
-  //   { name: 'Group D', value: 200 },
-  // ];
-  // const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+  const dataaa = [
+    { name: 'Group A', value: 400 },
+    { name: 'Group B', value: 300 },
+    { name: 'Group C', value: 300 },
+    { name: 'Group D', value: 200 },
+  ];
+  const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
     return (
       <>
@@ -71,7 +71,7 @@ const MyChart = () => {
             <Typography variant='h6' sx={{ ml: 20 }}>18%(13)</Typography>
         </Grid>
         <Grid item xs={12} md={4}>
-        {/* <PieChart width={800} height={400} onMouseEnter={this.onPieEnter}>
+        <PieChart width={800} height={400} onMouseEnter={this.onPieEnter}>
         <Pie
           data={dataaa}
           cx={120}
@@ -102,7 +102,7 @@ const MyChart = () => {
             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
           ))}
         </Pie>
-      </PieChart> */}
+      </PieChart>
         </Grid>
       </Grid> </>
     );
